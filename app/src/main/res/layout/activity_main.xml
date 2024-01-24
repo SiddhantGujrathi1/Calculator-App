@@ -1,18 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#FF6F6F"
+    android:padding="20dp"
+    android:backgroundTint="#2A3F4E">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="0"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="60dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="35dp"
+        android:layout_above="@id/nums"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/nums"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/on"
+                android:text="ON"
+                style="@style/Button1"
+                android:textSize="25sp"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/num7"
+                android:text="7"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/num4"
+                android:text="4"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/num1"
+                android:text="1"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/del"
+                android:text="DEL"
+                android:textSize="25sp"
+
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/off"
+                android:text="OFF"
+                android:textSize="25sp"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/num8"
+                android:text="8"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/num5"
+                android:text="5"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/num2"
+                android:text="2"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/num0"
+                android:text="0"
+                android:textSize="30sp"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/AC"
+                android:text="AC"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/num9"
+                android:text="9"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/num6"
+                android:text="6"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/num3"
+                android:text="3"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/numdot"
+                android:text="."
+                android:textSize="30sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/divide"
+                android:text="/"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/multiply"
+                android:text="x"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/subtract"
+                android:text="-"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button1"
+                android:id="@+id/add"
+                android:text="+"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Button2"
+                android:id="@+id/isequalto"
+                android:text="="
+                android:textSize="30sp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
