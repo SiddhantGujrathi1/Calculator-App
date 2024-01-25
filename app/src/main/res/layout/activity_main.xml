@@ -6,21 +6,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#FF6F6F"
+    android:background="#3B0000"
     android:padding="20dp"
-    android:backgroundTint="#2A3F4E">
+    android:backgroundTint="#400E1F">
 
     <TextView
         android:id="@+id/screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="0"
+        android:textAlignment="viewEnd"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="60dp"
         android:paddingHorizontal="15dp"
         android:paddingVertical="35dp"
-        android:layout_above="@id/nums"/>
+        android:layout_above="@id/nums"
+        android:background="#C9220606"
+
+        />
 
     <LinearLayout
         android:id="@+id/nums"
@@ -69,7 +73,6 @@
                 android:id="@+id/del"
                 android:text="DEL"
                 android:textSize="25sp"
-
                 />
         </LinearLayout>
 
