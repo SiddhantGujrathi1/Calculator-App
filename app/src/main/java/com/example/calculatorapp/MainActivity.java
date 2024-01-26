@@ -2,6 +2,7 @@ package com.example.calculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         OFF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                play();
                 screen.setVisibility(View.GONE);
             }
         });
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         ON.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                play();
                 screen.setVisibility(View.VISIBLE);
                 screen.setText("0");
             }
@@ -83,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
         for(Button b : nums){
             b.setOnClickListener(view -> {
+                play();
                 if(!screen.getText().toString().equals("0")){
                     screen.setText(screen.getText().toString() + b.getText().toString());
                 }else{
@@ -99,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
         for(Button b : opers){
             b.setOnClickListener(view -> {
+                play();
                 firstNum = Double.parseDouble(screen.getText().toString());
                 Operation = b.getText().toString();
                 screen.setText("0");
@@ -106,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         DEL.setOnClickListener(view -> {
+            play();
             String num = screen.getText().toString();
             if(num.length()>1){
                 screen.setText(num.substring(0,num.length()-1));
@@ -116,12 +122,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         dot.setOnClickListener(view -> {
+            play();
             if(!screen.getText().toString().contains(".")){
                 screen.setText(screen.getText().toString()+".");
             }
         });
 
         iseqaulto.setOnClickListener(view -> {
+            play();
             double secondNum = Double.parseDouble(screen.getText().toString());
             double result;
             switch(Operation){
@@ -148,10 +156,15 @@ public class MainActivity extends AppCompatActivity {
             firstNum = result;
         });
 
-
-
-
-
-
     }
+
+    MediaPlayer player;
+
+    public void play(){
+        if(player==null){
+            player = MediaPlayer.create(this,R.raw.click);
+        }
+        player.start();
+    }
+
 }
