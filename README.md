@@ -9,7 +9,9 @@ This is a simple and user-friendly calculator app designed for Android. It can p
 - Supports both portrait and landscape modes.
 
 ## Installation
-To install the app on your Android device, download the APK file from the repository and install it.
+To install the app on your Android device, download my repository.Then unzip it and open in android studio.
+Click on Build and then on Build Bundle/Apk.
+Then u found the app in CalculatorApp\app\build\outputs\apk\debug
 
 ## Usage
 1. Open the app.
